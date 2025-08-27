@@ -44,34 +44,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double peso, altura, IMC;
+                try {
+                    peso = Double.parseDouble(edPeso.getText().toString());
+                    altura = Double.parseDouble(edAltura.getText().toString());
 
-                peso = Double.parseDouble(edPeso.getText().toString());
-                altura = Double.parseDouble(edAltura.getText().toString());
+                    IMC = peso / (altura * altura);
 
-                IMC = peso / (altura * altura);
+                    DecimalFormat df = new DecimalFormat("#.##");
 
-                DecimalFormat df = new DecimalFormat("#.##");
+                    tvIMC.setText(df.format(IMC));
 
-                tvIMC.setText(df.format(IMC));
+                    if (IMC < 18.5){
+                        tvSituacao.setText("Abaixo do peso");
+                    }
+                    else if (IMC < 24.9){
+                        tvSituacao.setText("Peso normal");
+                    }
+                    else if ( IMC < 29.9){
+                        tvSituacao.setText("Sobrepeso");
+                    }
+                    else if (IMC < 34.9){
+                        tvSituacao.setText("Obesidade grau I");
+                    }
+                    else if (IMC < 39.9){
+                        tvSituacao.setText("Obesidade grau II");
+                    }
+                    else{
+                        tvSituacao.setText("Obesidade grau III ou mórbida");
+                    }
+                }
+                catch(Exception ex){
+                    tvIMC.setText("\nCampos inválidos, digite novamente");
+                    tvSituacao.setText("");
+                }
 
-                if (IMC < 18.5){
-                    tvSituacao.setText("Abaixo do peso");
-                }
-                else if (IMC < 24.9){
-                    tvSituacao.setText("Peso normal");
-                }
-                else if ( IMC < 29.9){
-                    tvSituacao.setText("Sobrepeso");
-                }
-                else if (IMC < 34.9){
-                    tvSituacao.setText("Obesidade grau I");
-                }
-                else if (IMC < 39.9){
-                    tvSituacao.setText("Obesidade grau II");
-                }
-                else{
-                    tvSituacao.setText("Obesidade grau III ou mórbida");
-                }
             }
         });
 

@@ -38,14 +38,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int anos, meses, dias, idade;
+                try{
+                    anos = Integer.parseInt(edAnos.getText().toString());
+                    meses = Integer.parseInt(edMeses.getText().toString());
+                    dias = Integer.parseInt(edDias.getText().toString());
 
-                anos = Integer.parseInt(edAnos.getText().toString());
-                meses = Integer.parseInt(edMeses.getText().toString());
-                dias = Integer.parseInt(edDias.getText().toString());
+                    idade = anos * 365 + meses * 30 + dias;
 
-                idade = anos * 365 + meses * 30 + dias;
+                    tvIdade.setText(String.valueOf(idade));
 
-                tvIdade.setText(String.valueOf(idade));
+                }
+                catch (Exception ex){
+                    tvIdade.setText("\nCampos inválidos ou vazios, corrija por favor");
+                }
+
             }
         });
 

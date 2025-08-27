@@ -1,5 +1,6 @@
 package com.example.calculadorahipotenusa;
 
+import android.app.Notification;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,7 +8,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -44,16 +47,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Double catA, catB, hipo;
+                try{
+                    catA = Double.parseDouble(edCatetoA.getText().toString());
+                    catB = Double.parseDouble(edCatetoB.getText().toString());
 
-                catA = Double.parseDouble(edCatetoA.getText().toString());
-                catB = Double.parseDouble(edCatetoB.getText().toString());
+                    hipo = Math.sqrt(catA * catA + catB * catB);
 
-                hipo = Math.sqrt(catA * catA + catB * catB);
-
-                DecimalFormat df = new DecimalFormat("#.##");
+                    DecimalFormat df = new DecimalFormat("#.##");
 
 
-                tvHipotenusa.setText(df.format(hipo));
+                    tvHipotenusa.setText(df.format(hipo));
+
+                }
+                catch (Exception ex){
+
+                    tvHipotenusa.setText("\nCampos com erro, corrija por favor");
+                }
+
 
 
             }

@@ -1,6 +1,7 @@
 package com.example.calculadoranota;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
     Button btCalcular, btLimpar;
@@ -42,16 +45,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double atv, p1, t1, t2, mult, media;
+                try {
+                    atv = Double.parseDouble(edAtv.getText().toString());
+                    p1 = Double.parseDouble(edP1.getText().toString());
+                    t1 = Double.parseDouble(edT1.getText().toString());
+                    t2 = Double.parseDouble(edT2.getText().toString());
+                    mult = Double.parseDouble(edMult.getText().toString());
 
-                atv = Double.parseDouble(edAtv.getText().toString());
-                p1 = Double.parseDouble(edP1.getText().toString());
-                t1 = Double.parseDouble(edT1.getText().toString());
-                t2 = Double.parseDouble(edT2.getText().toString());
-                mult = Double.parseDouble(edMult.getText().toString());
+                    media = atv * 0.2 + p1 * 0.2 + t1 * 0.3 + t2 * 0.3 + mult * 0.1;
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    tvMedia.setText(df.format(media));
+                }
+                catch (Exception ex){
+                    tvMedia.setText("\nCampos vazios, corrija por favor!");
+                }
 
-                media = atv * 0.2 + p1 * 0.2 + t1 * 0.3 + t2 * 0.3 + mult * 0.1;
-
-                tvMedia.setText(String.valueOf(media));
 
             }
         });
