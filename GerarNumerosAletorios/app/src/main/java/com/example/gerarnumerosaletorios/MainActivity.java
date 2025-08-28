@@ -45,15 +45,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int quant;
-                quant = Integer.parseInt(edQuantidade.getText().toString());
 
-                Set nums = new TreeSet();
-                Random random = new Random();
-                for (int i = 0; i < quant; i++){
-                    nums.add(random.nextInt(100));
+                try{
+                    quant = Integer.parseInt(edQuantidade.getText().toString());
+
+                    Set nums = new TreeSet();
+                    Random random = new Random();
+                    for (int i = 0; i < quant; i++){
+                        nums.add(random.nextInt(100));
+                    }
+
+                    tvNumeros.setText(String.valueOf(nums));
+                }
+                catch (Exception ex){
+                    tvNumeros.setText("Campos nulos ou inválidos, digite novamente!");
                 }
 
-                tvNumeros.setText(String.valueOf(nums));
+
+
             }
         });
 
