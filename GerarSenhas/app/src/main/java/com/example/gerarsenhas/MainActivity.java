@@ -31,59 +31,63 @@ public class MainActivity extends AppCompatActivity {
         btCaixaP = findViewById(R.id.btCaixaP);
         btResetar = findViewById(R.id.btResetar);
 
-        int senhaCaixa = 0, senhaAtendimento = 0, senhaConta = 0, senhaCaixaP = 0, senhaAtendimentoP = 0;
+        // int senhaCaixa = 0, senhaAtendimento = 0, senhaConta = 0, senhaCaixaP = 0, senhaAtendimentoP = 0;
+
+
+        tvNumero = findViewById(R.id.tvNumero);
+        tvTipo = findViewById(R.id.tvTipo);
         btCaixa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaCaixa++;
+                Global.senhaCaixa++;
                 tvTipo.setText("Cx");
-                tvNumero.setText(String.valueOf(senhaCaixa).toString());
+                tvNumero.setText(String.valueOf(Global.senhaCaixa));
             }
         });
         btAtendimento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaAtendimento++;
+                Global.senhaAtendimento++;
                 tvTipo.setText("At");
-                tvNumero.setText(String.valueOf(senhaAtendimento).toString());
+                tvNumero.setText(String.valueOf(Global.senhaAtendimento));
             }
         });
 
         btConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaConta++;
+                Global.senhaConta++;
                 tvTipo.setText("Ct");
-                tvNumero.setText(String.valueOf(senhaConta).toString());
+                tvNumero.setText(String.valueOf(Global.senhaConta));
             }
         });
 
         btAtendimentoP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaAtendimentoP++;
+                Global.senhaAtendimentoP++;
                 tvTipo.setText("AtP");
-                tvNumero.setText(String.valueOf(senhaAtendimentoP).toString());
+                tvNumero.setText(String.valueOf(Global.senhaAtendimentoP));
             }
         });
 
         btCaixaP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaCaixaP++;
+                Global.senhaCaixaP++;
                 tvTipo.setText("CxP");
-                tvNumero.setText(String.valueOf(senhaCaixaP).toString());
+                tvNumero.setText(String.valueOf(Global.senhaCaixaP));
             }
         });
 
         btResetar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                senhaCaixa = 0;
-                senhaAtendimento = 0;
-                senhaConta = 0;
-                senhaAtendimentoP = 0;
-                senhaCaixaP = 0;
+                Global.senhaCaixa = 0;
+                Global.senhaAtendimento = 0;
+                Global.senhaConta = 0;
+                Global.senhaAtendimentoP = 0;
+                Global.senhaCaixaP = 0;
 
                 tvTipo.setText("---");
                 tvNumero.setText("---");
