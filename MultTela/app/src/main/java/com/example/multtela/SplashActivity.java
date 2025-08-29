@@ -1,6 +1,8 @@
 package com.example.multtela;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +17,43 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
+
+        Handler h = new Handler();
+
+        h.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //
+                // exibirMainActivy();
+                exibirLoginActivy();
+            }
+        }, 2000);
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void exibirMainActivy(){
+        Intent telaInicial;
+
+        telaInicial = new Intent(SplashActivity.this, MainActivity.class);
+
+        startActivity(telaInicial);
+        finish();
+    }
+
+    private void exibirLoginActivy(){
+        Intent telaLogin;
+
+        telaLogin = new Intent(SplashActivity.this, LoginActivity.class);
+
+        startActivity(telaLogin);
+        finish();
     }
 }
