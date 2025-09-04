@@ -1,11 +1,16 @@
 package com.example.multtela;
 
+import static android.widget.Toast.*;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,10 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 String user;
 
                 user = edUser.getText().toString();
-                if (user != "Adm"){
-                    tvSituacao.setText("Usuário não encontrado");
-                }
-                else{
+                if (user.equals("Adm")){
 
                     String senha;
 
@@ -55,7 +57,18 @@ public class LoginActivity extends AppCompatActivity {
                         telaPrincipal = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(telaPrincipal);
                     }
+                    else{
 
+                        tvSituacao.setText("Senha Incorreta");
+                        Toast.makeText(LoginActivity.this, "Senha Incorreta", LENGTH_SHORT).show();
+
+                    }
+
+
+                }
+                else{
+                    tvSituacao.setText("Usuário não encontrado");
+                    Toast.makeText(LoginActivity.this, "Usuário não encontrado", LENGTH_SHORT).show();
                 }
 
             }
@@ -72,6 +85,20 @@ public class LoginActivity extends AppCompatActivity {
                 edSenha.setHint("Digite aqui...");
             }
         });
+
+        edUser.setOnFocusChangeListener(((v, hasFocus) -> {
+            if(!hasFocus){
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+            }
+        }));
+
+        edSenha.setOnFocusChangeListener(((v, hasFocus) -> {
+            if(!hasFocus){
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+            }
+        }));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
