@@ -56,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
 
                         telaPrincipal = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(telaPrincipal);
+                        Toast.makeText(LoginActivity.this, "Login feito com sucesso¹", LENGTH_SHORT).show();
+
+                        finish();
                     }
                     else{
 

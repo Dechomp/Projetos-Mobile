@@ -27,7 +27,7 @@
         android:layout_width="145dp"
         android:layout_height="80dp"
         android:layout_marginTop="180dp"
-        android:backgroundTint="#FF0080"
+        android:backgroundTint="#FF9800"
         android:text="Calcular Média"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -43,6 +43,17 @@
         android:text="Calcular IMC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btFechar"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="#00FFFFFF"
+        android:foreground="@android:drawable/btn_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

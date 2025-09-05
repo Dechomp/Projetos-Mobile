@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btMedia, btIMC;
+    Button btMedia, btIMC, btFechar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,21 +23,32 @@ public class MainActivity extends AppCompatActivity {
 
         btMedia = findViewById(R.id.btMedia);
         btIMC = findViewById(R.id.btIMC);
-
-
+        btFechar = findViewById(R.id.btFechar);
         btMedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent telaNota;
 
-                String app = "com.dechomp.calculadoraimc";
-                Intent media = getPackageManager().getLaunchIntentForPackage(app);
+                telaNota = new Intent(MainActivity.this, NotaActivity.class);
+                startActivity(telaNota);
 
-                if(media != null){
-                    startActivity(media);
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "App não encontrado", Toast.LENGTH_SHORT).show();
-                }
+            }
+        });
+
+        btIMC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaIMC;
+
+                telaIMC = new Intent(MainActivity.this, ImcActivity.class);
+                startActivity(telaIMC);
+            }
+        });
+
+        btFechar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAndRemoveTask();
             }
         });
 

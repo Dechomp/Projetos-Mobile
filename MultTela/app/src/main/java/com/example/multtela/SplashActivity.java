@@ -1,9 +1,12 @@
 package com.example.multtela;
 
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         telaInicial = new Intent(SplashActivity.this, MainActivity.class);
 
         startActivity(telaInicial);
+
         finish();
     }
 
@@ -53,7 +57,7 @@ public class SplashActivity extends AppCompatActivity {
         Intent telaLogin;
 
         telaLogin = new Intent(SplashActivity.this, LoginActivity.class);
-
+        Toast.makeText(SplashActivity.this, "Bem Vindo!", LENGTH_SHORT).show();
         startActivity(telaLogin);
         finish();
     }
