@@ -1,0 +1,3 @@
+Qual função é usada para atualizar um dado?;SELECT;DELETE;WHERE;UPDATE;UPDATE
+O que são chaves primárias?;Dados para identificar um elemento;Dados para identificar uma dependência;Dados para armazenar um valor único;Dados que são sempre auto-incrementados;Dados para identificar um elemento;
+Por que uma chave primária não pode ser algo como nome ou sexo?Pois são dados únicos;Pois são dados de textos;Pois são dados repetíveis;Pois não são números;Pois são dados repetíveis;
