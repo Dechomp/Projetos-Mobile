@@ -15,17 +15,15 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class TesteSqlActivity extends AppCompatActivity {
-    Button btQuestao1a, btQuestao1b, btQuestao1c, btQuestao1d;
-    Button btQuestao2a, btQuestao2b, btQuestao2c, btQuestao2d;
+    Button btQuestao1a, btQuestao1b, btQuestao1c, btQuestao1d, btVerificar;
 
-    TextView tvQuestao1, tvQuestao2;
+    TextView tvQuestaoNum, tvQuestaoTexto;
 
     String respCerta;
+
+    int numQuestao = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +35,12 @@ public class TesteSqlActivity extends AppCompatActivity {
         btQuestao1c = findViewById(R.id.btTesteSql1C);
         btQuestao1d = findViewById(R.id.btTesteSql1D);
 
-        btQuestao2a = findViewById(R.id.btTesteSql2A);
-        btQuestao2b = findViewById(R.id.btTesteSql2B);
-        btQuestao2c = findViewById(R.id.btTesteSql2C);
-        btQuestao2d = findViewById(R.id.btTesteSql2D);
 
-        tvQuestao1 = findViewById(R.id.tvQuestao1);
-        tvQuestao2 = findViewById(R.id.tvQuestao2);
 
+        tvQuestaoNum = findViewById(R.id.tvQuestaoSQLNum);
+        tvQuestaoTexto = findViewById(R.id.tvQuestaoSQLTexto);
+
+        btVerificar = findViewById(R.id.btVerificarSQL);
 
 
         carregarPerguntas();
@@ -59,7 +55,7 @@ public class TesteSqlActivity extends AppCompatActivity {
     private void carregarPerguntas(){
         ArrayList<String> linhas = new ArrayList<>();
         try {
-            InputStream inputStream = getResources().openRawResource(R.raw.perguntas);
+            InputStream inputStream = getResources().openRawResource(R.raw.perguntassql);
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
@@ -87,11 +83,13 @@ public class TesteSqlActivity extends AppCompatActivity {
 
             for(int i = 0; i < 3; i++){
                 perguntas[i] = linhas.get((Integer) ordem.toArray()[i]);
+                questaoNum = i;
                 exibirPergunta(perguntas[i]);
             }*/
-
-            String pergunta = linhas.get(0);
+            String pergunta = linhas.get(numQuestao);
             exibirPergunta(pergunta);
+            numQuestao++;
+
 
         }
 
@@ -108,17 +106,18 @@ public class TesteSqlActivity extends AppCompatActivity {
             String respD = partes[4];
             respCerta = partes[5];
 
-            tvQuestao1.setText(tvQuestao1.getText() + pergunta);
+            tvQuestaoNum.setText("Questao "+ (numQuestao + 1)+":");
+            tvQuestaoTexto.setText(pergunta);
 
-            btQuestao1a.setText("a) " + respA);
-            btQuestao1b.setText("b) " + respB);
-            btQuestao1c.setText("c) " + respC);
-            btQuestao1d.setText("d) " + respD);
+            btQuestao1a.setText(respA);
+            btQuestao1b.setText(respB);
+            btQuestao1c.setText(respC);
+            btQuestao1d.setText(respD);
 
             btQuestao1a.setOnClickListener(v -> verificarResp(btQuestao1a.getText().toString(), btQuestao1a.getId()));
-            //btQuestao1b.setOnClickListener(v -> verificarResp(btQuestao1b.getText().toString()));
-            //btQuestao1c.setOnClickListener(v -> verificarResp(btQuestao1c.getText().toString()));
-            //btQuestao1d.setOnClickListener(v -> verificarResp(btQuestao1d.getText().toString()));
+            btQuestao1b.setOnClickListener(v -> verificarResp(btQuestao1b.getText().toString(), btQuestao1b.getId()));
+            btQuestao1c.setOnClickListener(v -> verificarResp(btQuestao1c.getText().toString(), btQuestao1c.getId()));
+            btQuestao1d.setOnClickListener(v -> verificarResp(btQuestao1d.getText().toString(), btQuestao1d.getId()));
         }
     }
 
