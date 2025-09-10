@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GamestudandoBeta">
         <activity
+            android:name=".ResultadoTesteActivity"
+            android:exported="false" />
+        <activity
             android:name=".TesteAndroidActivity"
             android:exported="false" />
         <activity

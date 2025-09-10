@@ -2,6 +2,7 @@ package com.example.gamestudandobeta;
 
 import static android.graphics.Color.*;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -55,6 +56,9 @@ public class TesteSqlActivity extends AppCompatActivity {
 
 
         carregarPerguntas();
+
+        Global.acertosSql = 0;
+        Global.errosSql = 0;
 
         btQuestao1a.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,6 +249,16 @@ public class TesteSqlActivity extends AppCompatActivity {
             }
             else{
                 Toast.makeText(TesteSqlActivity.this, "Teste Terminado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TesteSqlActivity.this, "Total de acertos: " + Global.acertosSql, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TesteSqlActivity.this, "Total de erros: " + Global.errosSql, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TesteSqlActivity.this, "Pontuação total: " + (Global.acertosSql - Global.errosSql * 0.2), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(TesteSqlActivity.this, ResultadoTesteActivity.class);
+                startActivity(intent);
+
+                ResultadoTesteActivity.quantAcertos = Global.acertosSql;
+                ResultadoTesteActivity.quantErros = Global.errosSql;
+
                 finish();
             }
 
@@ -282,6 +296,8 @@ public class TesteSqlActivity extends AppCompatActivity {
             Toast.makeText(TesteSqlActivity.this, "Acertou!", Toast.LENGTH_SHORT).show();
             btVerificar.setBackgroundColor(parseColor("#80ff00"));
             btSelecionado.setBackgroundColor(parseColor("#80ff00"));
+
+            Global.acertosSql++;
         }
         else{
             Toast.makeText(TesteSqlActivity.this, "Errou!", Toast.LENGTH_SHORT).show();
@@ -301,8 +317,10 @@ public class TesteSqlActivity extends AppCompatActivity {
             else if(btQuestao1d != btSelecionado && btQuestao1d.getText().equals(respCerta)){
                 btQuestao1d.setBackgroundColor(parseColor("#80ff00"));
             }
+
+            Global.errosSql++;
         }
         btVerificar.setText("Próxima");
-    }
 
+    }
 }
