@@ -1,6 +1,7 @@
 package com.example.gamestudandobeta;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,6 +29,9 @@ public class ResultadoTesteActivity extends AppCompatActivity {
     TextView tvNotaResultado;
     public static int quantAcertos, quantErros;
 
+    androidx.constraintlayout.widget.ConstraintLayout main;
+
+    public static Drawable corFundo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,11 @@ public class ResultadoTesteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_resultado_teste);
 
         btFechar = findViewById(R.id.btFechar);
+
+        main = findViewById(R.id.main);
+
+        main.setBackground(corFundo);
+
         pieGraficoResultado = findViewById(R.id.pieGraficoResultado);
 
         tvNotaResultado = findViewById(R.id.tvNotaResultado);
@@ -64,7 +73,15 @@ public class ResultadoTesteActivity extends AppCompatActivity {
 
         btFechar.setOnClickListener(v -> finish());
 
-        tvNotaResultado.setText(String.valueOf(quantAcertos - quantErros * 0.2));
+        if(quantAcertos - quantErros * 0.2 < 0){
+            tvNotaResultado.setText("0");
+        }
+        else{
+            tvNotaResultado.setText(String.valueOf(quantAcertos - quantErros * 0.2));
+        }
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

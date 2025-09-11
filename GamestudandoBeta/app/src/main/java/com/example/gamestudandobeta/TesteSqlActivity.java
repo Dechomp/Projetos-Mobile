@@ -3,7 +3,6 @@ package com.example.gamestudandobeta;
 import static android.graphics.Color.*;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +20,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class TesteSqlActivity extends AppCompatActivity {
     Button btQuestao1a, btQuestao1b, btQuestao1c, btQuestao1d, btVerificar, btSelecionado;
@@ -34,6 +31,8 @@ public class TesteSqlActivity extends AppCompatActivity {
     int numQuestao = 0;
 
     ArrayList<String> linhas = new ArrayList<>();
+
+    androidx.constraintlayout.widget.ConstraintLayout main;
 
     int[] ordem = new int[30];
     @Override
@@ -52,9 +51,9 @@ public class TesteSqlActivity extends AppCompatActivity {
         tvQuestaoNum = findViewById(R.id.tvQuestaoSQLNum);
         tvQuestaoTexto = findViewById(R.id.tvQuestaoSQLTexto);
 
-        btVerificar = findViewById(R.id.btVerificarSQL);
+        btVerificar = findViewById(R.id.btVerificarAndroid);
 
-
+        main = findViewById(R.id.main);
         carregarPerguntas();
 
         Global.acertosSql = 0;
@@ -251,9 +250,16 @@ public class TesteSqlActivity extends AppCompatActivity {
                 Toast.makeText(TesteSqlActivity.this, "Teste Terminado", Toast.LENGTH_SHORT).show();
                 Toast.makeText(TesteSqlActivity.this, "Total de acertos: " + Global.acertosSql, Toast.LENGTH_SHORT).show();
                 Toast.makeText(TesteSqlActivity.this, "Total de erros: " + Global.errosSql, Toast.LENGTH_SHORT).show();
-                Toast.makeText(TesteSqlActivity.this, "Pontuação total: " + (Global.acertosSql - Global.errosSql * 0.2), Toast.LENGTH_SHORT).show();
+
+                if(Global.acertosSql - Global.errosSql * 0.2 > 0){
+                     Toast.makeText(TesteSqlActivity.this, "Pontuação total: " + (Global.acertosSql - Global.errosSql * 0.2), Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(TesteSqlActivity.this, "Pontuação total: 0", Toast.LENGTH_SHORT).show();
+                }
 
                 Intent intent = new Intent(TesteSqlActivity.this, ResultadoTesteActivity.class);
+                ResultadoTesteActivity.corFundo = main.getBackground();
                 startActivity(intent);
 
                 ResultadoTesteActivity.quantAcertos = Global.acertosSql;

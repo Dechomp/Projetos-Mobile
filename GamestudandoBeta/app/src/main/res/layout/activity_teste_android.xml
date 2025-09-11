@@ -7,5 +7,109 @@
     android:layout_height="match_parent"
     android:background="#4CAF50"
     tools:context=".TesteAndroidActivity">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="127dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:text="Teste de Android"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuestaoAndroidNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text=" "
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btTesteAndroid1C"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="404dp"
+        android:backgroundTint="#00cc66"
+        android:foregroundTint="#00cc66"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btTesteAndroid1A"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="252dp"
+        android:backgroundTint="#00cc66"
+        android:foregroundTint="#00cc66"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btTesteAndroid1B"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="252dp"
+        android:backgroundTint="#00cc66"
+        android:foregroundTint="#00cc66"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btTesteAndroid1D"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="404dp"
+        android:backgroundTint="#00cc66"
+        android:foregroundTint="#00cc66"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuestaoAndroidTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btVerificarAndroid"
+        android:layout_width="381dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="632dp"
+        android:backgroundTint="#8E8C8C"
+        android:clickable="false"
+        android:foregroundTint="#4E4C4C"
+        android:text="Verificar"
+        android:textColorLink="#615A5A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
