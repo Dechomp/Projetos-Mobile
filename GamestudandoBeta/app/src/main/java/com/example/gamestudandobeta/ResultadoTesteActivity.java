@@ -17,6 +17,7 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ResultadoTesteActivity extends AppCompatActivity {
@@ -77,7 +78,8 @@ public class ResultadoTesteActivity extends AppCompatActivity {
             tvNotaResultado.setText("0");
         }
         else{
-            tvNotaResultado.setText(String.valueOf(quantAcertos - quantErros * 0.2));
+            DecimalFormat df = new DecimalFormat("#.##");
+            tvNotaResultado.setText(df.format(quantAcertos - quantErros * 0.2));
         }
 
 

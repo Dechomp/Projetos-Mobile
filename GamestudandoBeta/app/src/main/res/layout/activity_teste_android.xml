@@ -34,19 +34,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btTesteAndroid1C"
-        android:layout_width="158dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="404dp"
-        android:backgroundTint="#00cc66"
-        android:foregroundTint="#00cc66"
-        android:text=" "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/btTesteAndroid1A"
         android:layout_width="158dp"
         android:layout_height="128dp"
@@ -73,6 +60,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btTesteAndroid1C"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="404dp"
+        android:backgroundTint="#00cc66"
+        android:foregroundTint="#00cc66"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/btTesteAndroid1D"
         android:layout_width="158dp"
         android:layout_height="128dp"
@@ -90,6 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

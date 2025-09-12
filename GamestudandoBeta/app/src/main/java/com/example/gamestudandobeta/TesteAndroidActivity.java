@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -64,17 +65,17 @@ public class TesteAndroidActivity extends AppCompatActivity {
                 if (btSelecionado != btQuestao1a){
                     btSelecionado = btQuestao1a;
 
-                    btQuestao1a.setBackgroundColor(parseColor("#ffcc33"));
-                    btQuestao1b.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1c.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1d.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1a.setBackgroundColor(parseColor("#66cc00"));
+                    btQuestao1b.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1c.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1d.setBackgroundColor(parseColor("#00cc66"));
 
                     btVerificar.setClickable(true);
                     btVerificar.setBackgroundColor(parseColor("#bfff00"));
 
                 }
                 else{
-                    btQuestao1a.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1a.setBackgroundColor(parseColor("#00cc66"));
                     btSelecionado = null;
                     btVerificar.setClickable(false);
                     btVerificar.setBackgroundColor(parseColor("#8E8C8C"));
@@ -90,16 +91,16 @@ public class TesteAndroidActivity extends AppCompatActivity {
                 if(btSelecionado != btQuestao1b){
                     btSelecionado = btQuestao1b;
 
-                    btQuestao1a.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1b.setBackgroundColor(parseColor("#ffcc33"));
-                    btQuestao1c.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1d.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1a.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1b.setBackgroundColor(parseColor("#66cc00"));
+                    btQuestao1c.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1d.setBackgroundColor(parseColor("#00cc66"));
 
                     btVerificar.setClickable(true);
                     btVerificar.setBackgroundColor(parseColor("#bfff00"));
                 }
                 else{
-                    btQuestao1b.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1b.setBackgroundColor(parseColor("#00cc66"));
                     btSelecionado = null;
                     btVerificar.setClickable(false);
                     btVerificar.setBackgroundColor(parseColor("#8E8C8C"));
@@ -114,16 +115,16 @@ public class TesteAndroidActivity extends AppCompatActivity {
                 if (btSelecionado != btQuestao1c){
                     btSelecionado = btQuestao1c;
 
-                    btQuestao1a.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1b.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1c.setBackgroundColor(parseColor("#ffcc33"));
-                    btQuestao1d.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1a.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1b.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1c.setBackgroundColor(parseColor("#66cc00"));
+                    btQuestao1d.setBackgroundColor(parseColor("#00cc66"));
 
                     btVerificar.setClickable(true);
                     btVerificar.setBackgroundColor(parseColor("#bfff00"));
                 }
                 else{
-                    btQuestao1c.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1c.setBackgroundColor(parseColor("#00cc66"));
                     btSelecionado = null;
                     btVerificar.setClickable(false);
                     btVerificar.setBackgroundColor(parseColor("#8E8C8C"));
@@ -137,16 +138,16 @@ public class TesteAndroidActivity extends AppCompatActivity {
                 if (btSelecionado != btQuestao1d){
                     btSelecionado = btQuestao1d;
 
-                    btQuestao1a.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1b.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1c.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1d.setBackgroundColor(parseColor("#ffcc33"));
+                    btQuestao1a.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1b.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1c.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1d.setBackgroundColor(parseColor("#66cc00"));
 
                     btVerificar.setClickable(true);
                     btVerificar.setBackgroundColor(parseColor("#bfff00"));
                 }
                 else{
-                    btQuestao1d.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1d.setBackgroundColor(parseColor("#00cc66"));
                     btSelecionado = null;
                     btVerificar.setClickable(false);
                     btVerificar.setBackgroundColor(parseColor("#8E8C8C"));
@@ -170,10 +171,10 @@ public class TesteAndroidActivity extends AppCompatActivity {
                     btVerificar.setClickable(false);
                     btVerificar.setText("Verificar");
                     btVerificar.setBackgroundColor(parseColor("#8E8C8C"));
-                    btQuestao1a.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1b.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1c.setBackgroundColor(parseColor("#ff9933"));
-                    btQuestao1d.setBackgroundColor(parseColor("#ff9933"));
+                    btQuestao1a.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1b.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1c.setBackgroundColor(parseColor("#00cc66"));
+                    btQuestao1d.setBackgroundColor(parseColor("#00cc66"));
 
                     btQuestao1a.setClickable(true);
                     btQuestao1b.setClickable(true);
@@ -253,7 +254,8 @@ public class TesteAndroidActivity extends AppCompatActivity {
                     Toast.makeText(TesteAndroidActivity.this, "Pontuação total: 0", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(TesteAndroidActivity.this, "Pontuação total: " + (Global.acertosAndroid - Global.errosAndroid * 0.2), Toast.LENGTH_SHORT).show();
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    Toast.makeText(TesteAndroidActivity.this, "Pontuação total: " + df.format(Global.acertosAndroid - Global.errosAndroid * 0.2), Toast.LENGTH_SHORT).show();
                 }
 
                 Intent intent = new Intent(TesteAndroidActivity.this, ResultadoTesteActivity.class);
@@ -287,11 +289,7 @@ public class TesteAndroidActivity extends AppCompatActivity {
             btQuestao1b.setText(respB);
             btQuestao1c.setText(respC);
             btQuestao1d.setText(respD);
-            /*
-            btQuestao1a.setOnClickListener(v -> verificarResp(btQuestao1a.getText().toString(), btQuestao1a.getId()));
-            btQuestao1b.setOnClickListener(v -> verificarResp(btQuestao1b.getText().toString(), btQuestao1b.getId()));
-            btQuestao1c.setOnClickListener(v -> verificarResp(btQuestao1c.getText().toString(), btQuestao1c.getId()));
-            btQuestao1d.setOnClickListener(v -> verificarResp(btQuestao1d.getText().toString(), btQuestao1d.getId()));*/
+
         }
     }
 

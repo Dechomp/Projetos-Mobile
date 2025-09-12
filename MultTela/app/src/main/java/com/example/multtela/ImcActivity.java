@@ -60,7 +60,7 @@ public class ImcActivity extends AppCompatActivity {
 
                         tvIMC.setText(df.format(IMC));
 
-                        Toast.makeText(ImcActivity.this, "IMC: " + df.format(IMC), LENGTH_SHORT).show();
+                        Toast.makeText(ImcActivity.this, "IMC: " + df.format(IMC), Toast.LENGTH_SHORT).show();
                         if (IMC < 18.5){
                             tvSituacao.setText("Abaixo do peso");
                             tvSituacao.setTextColor(Color.parseColor("#ADFF2F"));

@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -255,7 +256,8 @@ public class TesteJavaActivity extends AppCompatActivity {
                     Toast.makeText(TesteJavaActivity.this, "Pontuação total: 0", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(TesteJavaActivity.this, "Pontuação total: " + (Global.acertosJava - Global.errosJava * 0.2), Toast.LENGTH_SHORT).show();
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    Toast.makeText(TesteJavaActivity.this, "Pontuação total: " + df.format(Global.acertosJava - Global.errosJava * 0.2), Toast.LENGTH_SHORT).show();
                 }
 
                 Intent intent = new Intent(TesteJavaActivity.this, ResultadoTesteActivity.class);
@@ -289,11 +291,7 @@ public class TesteJavaActivity extends AppCompatActivity {
             btQuestao1b.setText(respB);
             btQuestao1c.setText(respC);
             btQuestao1d.setText(respD);
-            /*
-            btQuestao1a.setOnClickListener(v -> verificarResp(btQuestao1a.getText().toString(), btQuestao1a.getId()));
-            btQuestao1b.setOnClickListener(v -> verificarResp(btQuestao1b.getText().toString(), btQuestao1b.getId()));
-            btQuestao1c.setOnClickListener(v -> verificarResp(btQuestao1c.getText().toString(), btQuestao1c.getId()));
-            btQuestao1d.setOnClickListener(v -> verificarResp(btQuestao1d.getText().toString(), btQuestao1d.getId()));*/
+
         }
     }
 

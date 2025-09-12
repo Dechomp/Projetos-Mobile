@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -34,7 +35,8 @@ public class TesteSqlActivity extends AppCompatActivity {
 
     androidx.constraintlayout.widget.ConstraintLayout main;
 
-    int[] ordem = new int[30];
+    //int[] ordem = new int[30];
+    int[] ordem = new int[15];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -210,9 +212,12 @@ public class TesteSqlActivity extends AppCompatActivity {
 
 
             ordem[0] = -1;
-            for (int i = 0; i < 30; i++){
+
+            for (int i = 0; i < 15; i++){
+            //for (int i = 0; i < 30; i++){
                 Random random = new Random();
-                int num = random.nextInt(30);
+                int num = random.nextInt(15);
+                //int num = random.nextInt(30);
 
                 int diferente = 0;
 
@@ -252,9 +257,11 @@ public class TesteSqlActivity extends AppCompatActivity {
                 Toast.makeText(TesteSqlActivity.this, "Total de erros: " + Global.errosSql, Toast.LENGTH_SHORT).show();
 
                 if(Global.acertosSql - Global.errosSql * 0.2 > 0){
-                     Toast.makeText(TesteSqlActivity.this, "Pontuação total: " + (Global.acertosSql - Global.errosSql * 0.2), Toast.LENGTH_SHORT).show();
+                    DecimalFormat df = new DecimalFormat("#.##");
+                     Toast.makeText(TesteSqlActivity.this, "Pontuação total: " + df.format(Global.acertosSql - Global.errosSql * 0.2), Toast.LENGTH_SHORT).show();
                 }
                 else{
+
                     Toast.makeText(TesteSqlActivity.this, "Pontuação total: 0", Toast.LENGTH_SHORT).show();
                 }
 
