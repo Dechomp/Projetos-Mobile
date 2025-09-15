@@ -4,7 +4,10 @@ Quais dos componentes abaixo é específico para mostrar imagens?;TextView;Image
 Como alterar qual activy deve ser mostrada primeiro;Apenas alterando o nome para activy_main;Mudando no AndroidManifest a propriedade name ou exported;Mudando o context na própria activy;Não tem como alterar a tela inicial;Mudando no AndroidManifest a propriedade name ou exported;
 Qual função tem que ser usada para criar um evento de clicar de um botão?;findViewById;setBackgroundColor;setOnClickListener;setClickable;setOnClickListener;
 Como vincular uma classe de botão a um botão na interface?;Button botao1 = findViewById(R.id.btBotao1);TextView texto1 = findViewById(R.id.texto1);EditText main = findViewById(R.id.main);ImageView imgGif = findViewById(R.id.imgGif);;Button botao1 = findViewById(R.id.btBotao1);
-Qual propriedade deve ser alterada para mudar o ícone do app?;a;b;c;d;b;
-Qual função deve ser usada para mudar de tela;a;b;c;d;c;
-Apenas arrastar os componentes para a interface já garante que ficará no mesmo lugar?;a;b;c;d;d;
-Quais dos arquivos abaixo XML e Java estão relacionados?;a;b;c;d;a;
+Qual propriedade deve ser alterada para mudar o ícone do app?;android:icon;android:roundIcon;imgIcone.loadUrl();app:iconGravity;android:icon;
+Qual função deve ser usada para mudar de tela;Intent;startActivity();gotoNext();next();startActivity();
+Apenas arrastar os componentes para a interface já garante que ficará no mesmo lugar?;Sim pois, funciona que nem no Swing de Java;Não, pois se não configura sempre vai para baixo;Não, pois tem que orientar os pontos;Não, e não tem como direcionar corretamente;Não, pois tem que orientar os pontos;
+Quais dos arquivos abaixo XML e Java estão relacionados padronizadamente?;acitivy_main.xml e MinActivy.java;actuvy_splash.java e SplashActivy.xml;activy_main.xml e SplashActivy.java;splash_activ.xml e SplashActiv.java;splash_activ.xml e SplashActiv.java;
+Quais dos componentes abaixo é específico para ?;;;;;
+
+

@@ -13,3 +13,5 @@ Qual dessas funções possuei erro de sintaxe?;Select cli_nome from clientes whe
 Qual destas funções não está presente no MySql Workbench?;insert into; right join; left join;natural join;natural join;
 Qual desta funções sempre é ativada quando uma certa função é usada?;trigger;procedure;table;view;trigger;
 Quais da funções abaixo pode ser usada para criar conexões entre tabelas?;trigger;Inner Join;update;create procedure;Inner Join;
+O que é uma chave estrangeira?;É uma informação para indicar que o dado é de outro país;É um dado principal de outra tabela;É usada para indicar uma dependencia de outra tabela;É usada para identificar um dado que vem de outro arquivo;É um dado principal de outra tabela;
+Por que usamos chaves estrangeiras?;Para relacionar 2 tabelas;Para guardar a iformação de país de origem;Para guardar uma informação que não pode ser nula;Para guardar um dado auto-incrementado;Para relacionar 2 tabelas;

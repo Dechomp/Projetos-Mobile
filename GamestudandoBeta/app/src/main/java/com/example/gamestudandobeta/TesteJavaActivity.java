@@ -262,6 +262,7 @@ public class TesteJavaActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(TesteJavaActivity.this, ResultadoTesteActivity.class);
                 ResultadoTesteActivity.corFundo = main.getBackground();
+
                 startActivity(intent);
 
                 ResultadoTesteActivity.quantAcertos = Global.acertosJava;
