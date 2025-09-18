@@ -8,6 +8,8 @@ Qual propriedade deve ser alterada para mudar o ícone do app?;android:icon;andr
 Qual função deve ser usada para mudar de tela;Intent;startActivity();gotoNext();next();startActivity();
 Apenas arrastar os componentes para a interface já garante que ficará no mesmo lugar?;Sim pois, funciona que nem no Swing de Java;Não, pois se não configura sempre vai para baixo;Não, pois tem que orientar os pontos;Não, e não tem como direcionar corretamente;Não, pois tem que orientar os pontos;
 Quais dos arquivos abaixo XML e Java estão relacionados padronizadamente?;acitivy_main.xml e MinActivy.java;actuvy_splash.java e SplashActivy.xml;activy_main.xml e SplashActivy.java;splash_activ.xml e SplashActiv.java;splash_activ.xml e SplashActiv.java;
-Quais dos componentes abaixo é específico para ?;;;;;
-
-
+Quais dos componentes abaixo é específico para receber uma informação?;TextView;ImageView;EditText;Button;EditText;
+Quais dos componentes abaixo é específico para receber uma informação númerica inteira?;editTextNumberDecimal;editTextNumberSigned;editTextNumberPassword;editTextNumber;editTextNumberSigned;
+Quais dos componentes abaixo é específico para criar uma imagem com evento de clique?;imageButton;button;imageView;toggleButton;imageButton;
+Quais dos componentes abaixo é específico para receber um número de telefone?;editTextPhone;editTextNumber;editText;editTextNumberSigned;editTextPhone;
+Quais dos componentes abaixo é específico para receber uma senha com a maior possibilidades possiveis?;editTextPassword;editText;editTextNumberPassword;editTextNumberSigned;editTextPassword;

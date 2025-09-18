@@ -209,10 +209,11 @@ public class TesteAndroidActivity extends AppCompatActivity {
 
 
             ordem[0] = -1;
-            for (int i = 0; i < 30; i++){
+            for (int i = 0; i < 15; i++){
+            //for (int i = 0; i < 30; i++){
                 Random random = new Random();
-                int num = random.nextInt(30);
-
+              //  int num = random.nextInt(30);
+                int num = random.nextInt(15);
                 int diferente = 0;
 
                 for (int j = 0; j < i; j++){
@@ -272,7 +273,20 @@ public class TesteAndroidActivity extends AppCompatActivity {
     }
     private void exibirPergunta(String linha){
         String[] partes = linha.split(";");
+        /*int[] ordemRespostas = new int[4];
+        ordemRespostas[0] = -1;
+        for (int i = 0; i < 15; i++){
+            //for (int i = 0; i < 30; i++){
+            Random random = new Random();
+            //  int num = random.nextInt(30);
+            int num = random.nextInt(1, 5);
+            int diferente = 0;
 
+            for (int j = 0; j < i; j++){
+                if (ordem[j] != num){
+                    diferente++;
+                }
+            }*/
         if(partes.length >= 6){
 
             String pergunta = partes[0];
