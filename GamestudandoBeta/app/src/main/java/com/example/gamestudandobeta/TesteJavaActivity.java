@@ -274,7 +274,7 @@ public class TesteJavaActivity extends AppCompatActivity {
         }
     }
     private void exibirPergunta(String linha){
-        String[] partes = linha.split(";");
+        String[] partes = linha.split("@");
 
         if(partes.length >= 6){
 
