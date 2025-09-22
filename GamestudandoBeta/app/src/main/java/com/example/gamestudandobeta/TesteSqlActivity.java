@@ -35,8 +35,7 @@ public class TesteSqlActivity extends AppCompatActivity {
 
     androidx.constraintlayout.widget.ConstraintLayout main;
 
-    //int[] ordem = new int[30];
-    int[] ordem = new int[15];
+    int[] ordem = new int[30];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -213,11 +212,10 @@ public class TesteSqlActivity extends AppCompatActivity {
 
             ordem[0] = -1;
 
-            for (int i = 0; i < 15; i++){
-            //for (int i = 0; i < 30; i++){
+
+            for (int i = 0; i < 30; i++){
                 Random random = new Random();
-                int num = random.nextInt(15);
-                //int num = random.nextInt(30);
+                int num = random.nextInt(30);
 
                 int diferente = 0;
 
@@ -238,7 +236,7 @@ public class TesteSqlActivity extends AppCompatActivity {
 
 
         } catch (Exception e) {
-            Toast.makeText(TesteSqlActivity.this, "Erro", Toast.LENGTH_SHORT).show();
+            Toast.makeText(TesteSqlActivity.this, "Erro na aleatorização" + e.getMessage() + e.toString(), Toast.LENGTH_SHORT).show();
         }
 
         proxPergunta();

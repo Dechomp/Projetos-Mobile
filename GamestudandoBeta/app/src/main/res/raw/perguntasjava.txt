@@ -1,30 +1,30 @@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Aula@Educação@Classe@Feudalismo@Classe@
-O que são Classes em programação orientada a objeto(POO)?@Os "seres" do código@As "categorias" dos dados@As funções do código@As informações do código@Os "tipos" dos dados@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Imaginação@Abstração@Raciocinio@Pensamento@Abstração@
-O que é Abstração em programação orientada a objeto(POO)?@O processo de reformular algo@O processo de desenhar uma obra@O processo de descontruir algo@O processo de conceitualizar algo@O processo de conceitualizar algo@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Encapsulamento@Privatização@Ocultação@Acobertação@Encapsulamento@
-O que é Encapsulamento em programação orientada a objeto(POO)?@O processo de encapsular um remédio@O processo de esconder um dado@O processo de proteger uma instância@O processo de esconder um equipamento@O processo de esconder um dado@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Sucessão@Legado@Transmissão@Herança@Herança@
-O que é uma Herança em programação orientada a objeto(POO)?@O processo de receber um dado@O processo de transferencia de dinheiro@O processo de mandar informações@O processo de descender informações@O processo de deescender informações@
-O que é uma Interface em programação orientada a objeto(POO)?@Uma implementação de informações extras@Uma implementação de informações obrigatórias@Um método de mandar informações@Uma interface visual@Uma implementação de informações obrigatórias@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Polimorfismo@Transformação@Alteração@Transição@Polimorfismo@
-O que é Polimorfismo em programação orientada a objeto(POO)?@Um processo de transformar o tipo de dado(EX: inteiro para decimal)@Um processo de um transformar uma classe da instância para outra@O processo de, a partir da entrada, mudar como o sistema funcionará@O processo de mudar o tipo de retorno da uma função@O processo de, a partir da entrada, mudar como o sistema funcionará@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Função@Métodos@Fórmulas@Técnicas@Métodos@
-O que é Método em programação orientada a objeto(POO)?@Uma função que o objeto pode realizar@Um dado que um objeto pode ter@O código do objeto@Uma maneira de programar em Java@Uma função que o objeto pode realizar@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Atributos@Informações@Dados@Descrições@Atributos@
-O que é Atributo em programação orientada a objeto(POO)?@Uma função de um objeto@Um método de um objeto@Uma instancia do objeto@Um dado do objeto@Um dado do objeto@
-Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)@Coisas@Itens@Instruções@Objetos@Objetos@
-O que é Objeto em programação orientada a objeto(POO)?@Uma instancia@Um categoria@Uma função@Uma espécie@Uma instancia@
-Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 0; i < 21; i++){System.out.println("Contagem: " + i )}@20@22@0@21@21@
-Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 0; i <= 21; i++){System.out.println("Contagem: " + i )}@20@22@0@21@22@
-Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 21; i > 0; i--){System.out.println("Contagem: " + i )}@1@21@0@-1@0@
-Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = -2; i < 28; i *= i){System.out.println("Contagem: " + i )}@256@30@28@32@256@
-Ao final do código, qual será o valor de i(desconsiderando o ponto e virgula)?for( double i = 2; i < 28; i = (i * i) * 1.3){System.out.println("" + i)}@25.9@32.4@28.20@35.15@35.15@
-Qual código abaixo cria uma classe@public int criarClasse@public static void pessoa@public class pessoa@public interface robo@public class pessoa@
-Quais dos códigos abaixo não é uma super classe em Java?@public class foneJBL implements foneOuvido@public class carnes@public class jogo@public class livro@public class foneJBL implements foneOuvido@
-Quais dos códigos abaixo cria uma interface?@public class foneJBL implements foneOuvido@public class livro@public interface lampada@public class aluno extends pessoa@public interface lampada@
-Qual da sintaxe abaixo cria uma classe filha?@public class pizza@public class aluno extends pessoa@public interface foneOuvido@public class foneJBL implements foneOuvido@@public class aluno extends pessoa@
-Qual das funções abaixo está sobrescrevendo uma função?@private boolean atualizar()@public boolean atualizar(){}@@Override public boolean atualizar(){}@boolean atualizar()@@Override public boolean atualizar(){}@
-Qual classe abaixo pode criar uma interface visual?@public interface foneOuvido@public interface imagem@public class imagem@public class FormPrincipal extends javax.swing.JFrame@public class FormPrincipal extends javax.swing.JFrame@
-Quais das classes abaixo pode evitar um SQL injection?@PreparedStatement@SqlInjectionBanner@SqlAntiInjection@injectionBlocker@PreparedStatement@
-Qual dos códigos abaixo altera um texto de um componente? (desconsiderando o ponto e virgula)@btCalcular.getId()@btnCalcular.setText("")@txtNum.getText()@txtNum.setEnable(false)@btnCalcular.setText("")@
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Aula@Educação@Classe@Feudalismo@Classe
+O que são Classes em programação orientada a objeto(POO)?@Os "seres" do código@As "categorias" dos dados@As funções do código@As informações do código@As "categorias" dos dados
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Imaginação@Abstração@Raciocinio@Pensamento@Abstração
+O que é Abstração em programação orientada a objeto(POO)?@O processo de reformular algo@O processo de desenhar uma obra@O processo de descontruir algo@O processo de conceitualizar algo@O processo de conceitualizar algo
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Encapsulamento@Privatização@Ocultação@Acobertação@Encapsulamento
+O que é Encapsulamento em programação orientada a objeto(POO)?@O processo de encapsular um remédio@O processo de esconder um dado@O processo de proteger uma instância@O processo de esconder um equipamento@O processo de esconder um dado
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Sucessão@Legado@Transmissão@Herança@Herança
+O que é uma Herança em programação orientada a objeto(POO)?@O processo de receber um dado@O processo de transferencia de dinheiro@O processo de mandar informações@O processo de descender informações@O processo de descender informações
+O que é uma Interface em programação orientada a objeto(POO)?@Uma implementação de informações extras@Uma implementação de informações obrigatórias@Um método de mandar informações@Uma interface visual@Uma implementação de informações obrigatórias
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Polimorfismo@Transformação@Alteração@Transição@Polimorfismo
+O que é Polimorfismo em programação orientada a objeto(POO)?@Um processo de transformar o tipo de dado(EX: inteiro para decimal)@Um processo de um transformar uma classe da instância para outra@O processo de, a partir da entrada, mudar como o sistema funcionará@O processo de mudar o tipo de retorno da uma função@O processo de, a partir da entrada, mudar como o sistema funcionará
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Função@Métodos@Fórmulas@Técnicas@Métodos
+O que é Método em programação orientada a objeto(POO)?@Uma função que o objeto pode realizar@Um dado que um objeto pode ter@O código do objeto@Uma maneira de programar em Java@Uma função que o objeto pode realizar
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Atributos@Informações@Dados@Descrições@Atributos
+O que é Atributo em programação orientada a objeto(POO)?@Uma função de um objeto@Um método de um objeto@Uma instancia do objeto@Um dado do objeto@Um dado do objeto
+Qual das opções abaixo é uma das bases da programação orientada a objeto(POO)?@Coisas@Itens@Instruções@Objetos@Objetos
+O que é Objeto em programação orientada a objeto(POO)?@Uma instancia@Um categoria@Uma função@Uma espécie@Uma instancia
+Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 0; i < 21; i++){System.out.println("Contagem: " + i )}@20@22@0@21@21
+Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 0; i <= 21; i++){System.out.println("Contagem: " + i )}@20@22@0@21@22
+Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = 21; i > 0; i--){System.out.println("Contagem: " + i )}@1@21@0@-1@0
+Ao final do código, qual será o valor de i (desconsiderando o ponto e virgula)?for(int i = -2; i < 28; i *= i){System.out.println("Contagem: " + i )}@256@30@28@32@256
+Ao final do código, qual será o valor de i(desconsiderando o ponto e virgula)?for( double i = 2; i < 28; i = (i * i) * 1.3){System.out.println("" + i)}@25.9@32.4@28.20@35.15@35.15
+Qual código abaixo cria uma classe?@public int criarClasse@public static void pessoa@public class pessoa@public interface robo@public class pessoa
+Quais dos códigos abaixo não é uma super classe em Java?@public class foneJBL implements foneOuvido@public class carnes@public class jogo@public class livro@public class foneJBL implements foneOuvido
+Quais dos códigos abaixo cria uma interface?@public class foneJBL implements foneOuvido@public class livro@public interface lampada@public class aluno extends pessoa@public interface lampada
+Qual da sintaxe abaixo cria uma classe filha?@public class pizza@public class aluno extends pessoa@public interface foneOuvido@public class foneJBL implements foneOuvido@public class aluno extends pessoa
+Qual das funções abaixo está sobrescrevendo uma função?@private boolean atualizar()@public boolean atualizar(){}@Override public boolean atualizar(){}@boolean atualizar()@Override public boolean atualizar(){}
+Qual classe abaixo pode criar uma interface visual?@public interface foneOuvido@public interface imagem@public class imagem@public class FormPrincipal extends javax.swing.JFrame@public class FormPrincipal extends javax.swing.JFrame
+Quais das classes abaixo pode evitar um SQL injection?@PreparedStatement@SqlInjectionBanner@SqlAntiInjection@injectionBlocker@PreparedStatement
+Qual dos códigos abaixo altera um texto de um componente? (desconsiderando o ponto e virgula)@btCalcular.getId()@btnCalcular.setText("")@txtNum.getText()@txtNum.setEnable(false)@btnCalcular.setText("")

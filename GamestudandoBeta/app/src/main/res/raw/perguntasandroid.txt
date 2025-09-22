@@ -13,3 +13,6 @@ Quais dos componentes abaixo é específico para receber uma informação númer
 Quais dos componentes abaixo é específico para criar uma imagem com evento de clique?;imageButton;button;imageView;toggleButton;imageButton;
 Quais dos componentes abaixo é específico para receber um número de telefone?;editTextPhone;editTextNumber;editText;editTextNumberSigned;editTextPhone;
 Quais dos componentes abaixo é específico para receber uma senha com a maior possibilidades possiveis?;editTextPassword;editText;editTextNumberPassword;editTextNumberSigned;editTextPassword;
+Quais são as linguagens suportadas pelo AndroidStudio nativamente?;C++ e Kotlin;Java e C;Kotlin e SQL;Kotlin e Java;Kotlin e Java
+Para quais plataformas o AndroidStudio consegue produzir app?;Iphones e Celulares Android;Iphones e Web;TVs e Celulares Android;Relogios e Iphones;TVs e Celulares Android
+Para quais plataformas o AndroidStudio não tem suporte nativo para programar apps?;TVs e Automotivos;Relógios e Tablets;Iphones e Arduinos;Celulares Android e Tablets;Iphones e Arduinos

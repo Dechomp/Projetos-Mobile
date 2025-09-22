@@ -1,9 +1,22 @@
 Qual função é usada para atualizar um dado?;SELECT;DELETE;WHERE;UPDATE;UPDATE;
+Qual função é usada para deletar um dado?;UPDATE;SELECT;DELETE;INSERT;DELETE
+Qual função é usada para inserir um dado?;INSERT;WHERE;ORDER BY;GROUP BY;INSERT
+Qual função é usada para procurar um dado?;CREATE;SELECT;GROUP BY;ORDER BY;SELECT
+Qual função é usada para criar uma tabela?;CREATE TABLE;CREATE DATABASE;CREATE VIEW;CREATE TRIGGER;CREATE TABLE
+Qual função é usada para criar um banco de dados?;CREATE TRIGGER;CREATE TABLE;CREATE DATABASE;CREATE VIEW;CREATE DATABASE
+Qual função é usada para deletar um banco de dados;DROP VIEW;DROP TRIGGER;DROP TABLE;DROP DATABASE;DROP DATABASE
+Qual função é usada para antes de comparar um dado?;WHERE;DROP;DELETE;SELECT;WHERE
+Qual função é usada para ordenar dados?;GROUP BY;ORDER BY;DESC;ASC;ORDER BY
+Qual função é usada para auto-incrementar um dado?;cli_id++;cli_id--;AUTO-INCREMENT;COMPLETE;AUTO-INCREMENT
+Como temos que identificar uma chave primária?;FORIGN KEY;PRIMARY KEY;FIRST KEY;MAIN KEY;PRIMARY KEY
+Qual dado abaixo não é recomendado para criar uma chave primária?;Nome;Email;CPF;CNPJ;Nome
+Qual dado abaixo é recomendado para criar um dado único?;Telefone;RG;Nome;EMAIL;EMAIL
+Quais dados possuem apenas dados possivelmente primários?Nome,CPF,Telefone;Telefone,Email,CPF;Telefone,ID,CPF;CPF,Email,ID;CPF,Email,ID
 O que são chaves primárias?;Dados para identificar um elemento;Dados para identificar uma dependência;Dados para armazenar um valor único;Dados que são sempre auto-incrementados;Dados para identificar um elemento;
 Por que uma chave primária não pode ser algo como nome ou sexo?;Pois são dados únicos;Pois são dados de textos;Pois são dados repetíveis;Pois não são números;Pois são dados repetíveis;
 Qual o erro de sintax neste Código? Select from Clientes;Faltou o Where;O nome da Tabela está incorreta;Faltou quais informações quer que apareça;O código está certo;Faltou quais informações quer que apareça;
 Quais das opções fazem o vínculo de uma tabela com outra:;Where, InnerJoin, Select;Right Join, Where, Inner Join;Inner Join, Group By, Having;From, Where, Create;Right Join, Where, Inner Join;
-Qual o erro de lógica nesta código? Select * from Itens where itm_preco == '13.6';Comparação de um dado decimal com um texto;Dado com o nome incorreto;Tabela com letra Maiuscula;Está selecionando dados desnecessários;Comparação de um dado decimal com um texto;
+Qual o erro de lógica nesta código? Select * from Itens where itm_preco = '13.6';Comparação de um dado decimal com um texto;Dado com o nome incorreto;Tabela com letra Maiuscula;Está selecionando dados desnecessários;Comparação de um dado decimal com um texto;
 O quais da funções abaixo pode ser usadas para criar tabelas temporárias?;create table;insert into;update;create view;create view;
 Quais das funções podem operar em várias tabela usando variáveis?;create procedure;delete from;select * from;update table;create procedure;
 Qual o erro do sintaxe no código? update clientes sete cli_nome = 'Maria' where cli_id = 988;Uso de aspas simples ao invés de aspas duplas;Tabela referenciada com letra minuscula;fechamento do código com pontos e virgula;confundiu set com sete;confundiu set com sete;
