@@ -209,11 +209,10 @@ public class TesteAndroidActivity extends AppCompatActivity {
 
 
             ordem[0] = -1;
-            for (int i = 0; i < 15; i++){
-            //for (int i = 0; i < 30; i++){
+
+            for (int i = 0; i < 30; i++){
                 Random random = new Random();
-              //  int num = random.nextInt(30);
-                int num = random.nextInt(15);
+                int num = random.nextInt(30);
                 int diferente = 0;
 
                 for (int j = 0; j < i; j++){

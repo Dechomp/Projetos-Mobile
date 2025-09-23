@@ -16,3 +16,15 @@ Quais dos componentes abaixo é específico para receber uma senha com a maior p
 Quais são as linguagens suportadas pelo AndroidStudio nativamente?;C++ e Kotlin;Java e C;Kotlin e SQL;Kotlin e Java;Kotlin e Java
 Para quais plataformas o AndroidStudio consegue produzir app?;Iphones e Celulares Android;Iphones e Web;TVs e Celulares Android;Relogios e Iphones;TVs e Celulares Android
 Para quais plataformas o AndroidStudio não tem suporte nativo para programar apps?;TVs e Automotivos;Relógios e Tablets;Iphones e Arduinos;Celulares Android e Tablets;Iphones e Arduinos
+Por padrão, aonde é encontrado os arquivos de imagem?;Layout;Drawable;Java;Raw;Drawable
+Por padrão, aonde é encontrado os arquivos de texto?;Drawable;Layout;Raw;Java;Raw;
+Por padrão, aonde é encontrado os arquivos Java?;Java;Raw;Drawable;Layout;Java
+Por padrão, aonde é encontrado os arquivos das telas?;
+Por padrão, aonde é encontrado os arquivos de dependencia?;
+Por padrão, aonde é encontrado os arquivos do FrontEnd?;
+Qual é propriedade que se deve alterar para trocar o fundo da tela?;
+Qual é o componente que permite "Scrolar" a tela?;
+Qual é o componente que permite adicionar os componentes na tela sem necessitar passar as coordenadas?;
+Qual é o componente que permite adicionar botões que se alternam?;
+Qual é o componente que permite adicionar botões para ligar ou desligar?;
+Qual é o componente que permite adicionar uma caixa de seleção?;
