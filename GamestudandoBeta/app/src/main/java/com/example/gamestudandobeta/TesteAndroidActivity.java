@@ -272,27 +272,36 @@ public class TesteAndroidActivity extends AppCompatActivity {
     }
     private void exibirPergunta(String linha){
         String[] partes = linha.split(";");
-        /*int[] ordemRespostas = new int[4];
-        ordemRespostas[0] = -1;
-        for (int i = 0; i < 15; i++){
-            //for (int i = 0; i < 30; i++){
+        int[] ordemPerguntas = new int[4];
+
+        ordemPerguntas[0] = -1;
+        for (int i = 0; i < 4; i++){
             Random random = new Random();
-            //  int num = random.nextInt(30);
-            int num = random.nextInt(1, 5);
+            int num = random.nextInt(4) + 1;
+
             int diferente = 0;
 
             for (int j = 0; j < i; j++){
-                if (ordem[j] != num){
+                if (ordemPerguntas[j] != num){
                     diferente++;
                 }
-            }*/
+            }
+
+            if (diferente >= i){
+                ordemPerguntas[i] = num;
+            }
+            else{
+                i--;
+            }
+
+        }
         if(partes.length >= 6){
 
             String pergunta = partes[0];
-            String respA = partes[1];
-            String respB = partes[2];
-            String respC = partes[3];
-            String respD = partes[4];
+            String respA = partes[ordemPerguntas[0]];
+            String respB = partes[ordemPerguntas[1]];
+            String respC = partes[ordemPerguntas[2]];
+            String respD = partes[ordemPerguntas[3]];
             respCerta = partes[5];
 
             tvQuestaoNum.setText("Questao "+ (numQuestao + 1)+":");

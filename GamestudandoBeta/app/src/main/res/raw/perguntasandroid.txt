@@ -9,22 +9,22 @@ Qual função deve ser usada para mudar de tela;Intent;startActivity();gotoNext(
 Apenas arrastar os componentes para a interface já garante que ficará no mesmo lugar?;Sim pois, funciona que nem no Swing de Java;Não, pois se não configura sempre vai para baixo;Não, pois tem que orientar os pontos;Não, e não tem como direcionar corretamente;Não, pois tem que orientar os pontos;
 Quais dos arquivos abaixo XML e Java estão relacionados padronizadamente?;acitivy_main.xml e MinActivy.java;actuvy_splash.java e SplashActivy.xml;activy_main.xml e SplashActivy.java;splash_activ.xml e SplashActiv.java;splash_activ.xml e SplashActiv.java;
 Quais dos componentes abaixo é específico para receber uma informação?;TextView;ImageView;EditText;Button;EditText;
-Quais dos componentes abaixo é específico para receber uma informação númerica inteira?;editTextNumberDecimal;editTextNumberSigned;editTextNumberPassword;editTextNumber;editTextNumberSigned;
+Quais dos componentes abaixo é específico para receber uma informação númerica inteira?;editTextNumberDecimal;editTextNumberSigned;editTextNumberPassword;editText;editTextNumberSigned;
 Quais dos componentes abaixo é específico para criar uma imagem com evento de clique?;imageButton;button;imageView;toggleButton;imageButton;
 Quais dos componentes abaixo é específico para receber um número de telefone?;editTextPhone;editTextNumber;editText;editTextNumberSigned;editTextPhone;
 Quais dos componentes abaixo é específico para receber uma senha com a maior possibilidades possiveis?;editTextPassword;editText;editTextNumberPassword;editTextNumberSigned;editTextPassword;
 Quais são as linguagens suportadas pelo AndroidStudio nativamente?;C++ e Kotlin;Java e C;Kotlin e SQL;Kotlin e Java;Kotlin e Java
 Para quais plataformas o AndroidStudio consegue produzir app?;Iphones e Celulares Android;Iphones e Web;TVs e Celulares Android;Relogios e Iphones;TVs e Celulares Android
 Para quais plataformas o AndroidStudio não tem suporte nativo para programar apps?;TVs e Automotivos;Relógios e Tablets;Iphones e Arduinos;Celulares Android e Tablets;Iphones e Arduinos
-Por padrão, aonde é encontrado os arquivos de imagem?;Layout;Drawable;Java;Raw;Drawable
-Por padrão, aonde é encontrado os arquivos de texto?;Drawable;Layout;Raw;Java;Raw;
-Por padrão, aonde é encontrado os arquivos Java?;Java;Raw;Drawable;Layout;Java
-Por padrão, aonde é encontrado os arquivos das telas?;
-Por padrão, aonde é encontrado os arquivos de dependencia?;
-Por padrão, aonde é encontrado os arquivos do FrontEnd?;
-Qual é propriedade que se deve alterar para trocar o fundo da tela?;
-Qual é o componente que permite "Scrolar" a tela?;
-Qual é o componente que permite adicionar os componentes na tela sem necessitar passar as coordenadas?;
-Qual é o componente que permite adicionar botões que se alternam?;
-Qual é o componente que permite adicionar botões para ligar ou desligar?;
-Qual é o componente que permite adicionar uma caixa de seleção?;
+Por padrão, aonde é encontrado os arquivos de imagem?;layout;drawable;java;raw;drawable
+Por padrão, aonde é encontrado os arquivos de texto?;drawable;layout;raw;java;raw;
+Por padrão, aonde é encontrado os arquivos Java?;java;values;drawable;layout;java
+Por padrão, aonde é encontrado os arquivos das telas?;raw;xml;layout;drawable;layout
+Por padrão, aonde é encontrado os arquivos de dependencia?;gradle scripts;manifest;minimap;res;gradle scripts
+Por padrão, aonde é encontrado os arquivos do FrontEnd?;java;drawable;res;gradle scripts;res
+Qual é propriedade que se deve alterar para trocar o fundo da tela?;text;color;background;foregroundTint;background
+Qual é o componente que permite "Scrolar" a tela?;scrollView;constraintLayout;cardView;chipGroup;scrollView
+Qual é o componente que permite adicionar os componentes na tela livremente sem necessitar passar as coordenadas?;chipGroup;cardView;constraintLayout;scrolView;constraintLayout
+Qual é o componente que permite alternar entre botões?;button;imageButton;radioButton;radioGroup;radioGroup
+Qual é o componente é mais recomendado para adicionar botões de ligar ou desligar?;radioButton;button;switch;imageButton;switch
+Qual é o componente é mais recomendado para adicionar uma caixa de seleção?;checkBox;radioButton;switch;button;checkBox
