@@ -36,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                exibirMainActivy();
+                exibirLoginActivy();
 
             }
         }, 6300);
@@ -47,10 +47,10 @@ public class SplashActivity extends AppCompatActivity {
         });
     }
 
-    private void exibirMainActivy(){
+    private void exibirLoginActivy(){
         Intent telaInicial;
 
-        telaInicial = new Intent(SplashActivity.this, MainActivity.class);
+        telaInicial = new Intent(SplashActivity.this, LoginActivity.class);
 
 
         startActivity(telaInicial);
