@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
                 finishAndRemoveTask();
             }
         });
-
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +69,9 @@ public class LoginActivity extends AppCompatActivity {
 
                         //Inicio a nova tela
                         startActivity(telaPrincipal);
+
+                        //Mensagem de login
+                        Toast.makeText(LoginActivity.this, "Bem-vindo" + user, Toast.LENGTH_SHORT).show();
 
                         //Fecho a tela de login
                         finish();
