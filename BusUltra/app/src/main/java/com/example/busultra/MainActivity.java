@@ -125,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         /*
-        Para adicionar a lista ao sppiner, teremos que criar um adaptador
+        Para adicionar a lista ao spinner, teremos que criar um adaptador
         /
-        Como temos duas listas, iremos criar uma funç~~ao para isto
+        Como temos duas listas, iremos criar uma função para isto
         ...
         Agora é só chamar a função
         */
@@ -180,6 +180,11 @@ public class MainActivity extends AppCompatActivity {
                 //Primeiro vai verificar campos vazios ou não escolhidos
                 if(edDataViagem.equals("") || origem.contains("Selecione") || destino.contains("Selecione")){
                     Toast.makeText(MainActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+                }
+
+                //Impede de escolher o destino igual a origem
+                else if(origem == destino){
+                    Toast.makeText(MainActivity.this, "Escolha a destino diferente da origem", Toast.LENGTH_SHORT).show();
                 }
             }
         });
