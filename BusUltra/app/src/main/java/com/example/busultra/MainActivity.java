@@ -25,11 +25,13 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button btEscolherData;
+    Button btEscolherData, btBuscarPassagem;
 
     EditText edDataViagem;
 
     Spinner spOrigem, spDestino;
+
+    String origem, destino;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Botões
         btEscolherData = findViewById(R.id.btEscolherData);
+        btBuscarPassagem = findViewById(R.id.btBuscar);
 
         //Textos editáveis
         edDataViagem = findViewById(R.id.edDataViagem);
@@ -82,18 +85,42 @@ public class MainActivity extends AppCompatActivity {
                        //Os parâmetros que irá usar
                        (view, year, month, dayOfMonth) -> {
                            //Assim que der OK, vai criar o texto da data
-                           String dataEsc = dayOfMonth + "/" + (month + 1) + "/" + year;
-                           //Mostra a mensagem da data escolhida
-                           Toast.makeText(MainActivity.this, "Data escolhida: " + dataEsc, Toast.LENGTH_SHORT).show();
 
-                           //Troca o texto do edDataViagem com fim de armazenamento
-                           edDataViagem.setText(dataEsc);
+
+                           Calendar dataSelecionada = Calendar.getInstance();
+                           dataSelecionada.set(year, month, dayOfMonth, 0, 0, 0);
+
+
+                           //Caso ele escolha a data de hoje
+                           if(dataSelecionada.before(calendario)){
+                               Toast.makeText(MainActivity.this, "Escolha uma data posterior a hoje", Toast.LENGTH_SHORT).show();
+                           }
+                           else{
+                               //Texto para mostrar a data escolhida
+                               String dataEsc = dayOfMonth + "/" + (month + 1) + "/" + year;
+
+                               //Mostra a mensagem da data escolhida
+                               Toast.makeText(MainActivity.this, "Data escolhida: " + dataEsc, Toast.LENGTH_SHORT).show();
+
+                               //Troca o texto do edDataViagem com fim de armazenamento
+                               edDataViagem.setText(dataEsc);
+
+                           }
+
                        },
                        //Referente a ordem dos parâmetros
                        ano, mes, dia
                );
-                //Mostra o calendário na tela
+
+               //Impede que o usuário selecione datas passadas
+               calendarioFlutuante.getDatePicker().setMinDate(calendario.getTimeInMillis());
+
+               //Mostra o calendário na tela
                calendarioFlutuante.show();
+
+
+
+
            }
         });
 
@@ -119,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Asim que um item for selecionado e não tiver escrito "Selecione", mostra o destino escolhido
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String origem = parent.getItemAtPosition(position).toString();
+                origem = parent.getItemAtPosition(position).toString();
                 if (! origem.contains("Selecione")){
                     Toast.makeText(MainActivity.this, "Origem selecionada: " + origem, Toast.LENGTH_SHORT).show();
                 }
@@ -134,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         spDestino.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String destino = parent.getItemAtPosition(position).toString();
+                destino = parent.getItemAtPosition(position).toString();
                 if(!destino.contains("Selecione")){
                     Toast.makeText(MainActivity.this, "Destino selecionado: " + destino, Toast.LENGTH_SHORT).show();
                 }
@@ -146,6 +173,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Quando colocar para buscar passagem
+        btBuscarPassagem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Primeiro vai verificar campos vazios ou não escolhidos
+                if(edDataViagem.equals("") || origem.contains("Selecione") || destino.contains("Selecione")){
+                    Toast.makeText(MainActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
