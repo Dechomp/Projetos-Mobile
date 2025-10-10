@@ -1,6 +1,7 @@
 package com.example.busultra;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         destinos.add("Selecione...");
         destinos.add("Santana de Parnaíba");
         destinos.add("Cajamar");
-        destinos.add("RIo de Janeiro");
+        destinos.add("Rio de Janeiro");
 
 
         //Quando clicar no botão btEscolherData
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                //Crio uma variável do tipo calendário
                Calendar calendario = Calendar.getInstance();
 
-               //Crio uma vaqriável para cada informação de data
+               //Crio uma variável para cada informação de data
                int dia, mes, ano;
 
                //Cada uma recebe o tipo da informação
@@ -84,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
                        MainActivity.this,
                        //Os parâmetros que irá usar
                        (view, year, month, dayOfMonth) -> {
-                           //Assim que der OK, vai criar o texto da data
-
-
                            Calendar dataSelecionada = Calendar.getInstance();
                            dataSelecionada.set(year, month, dayOfMonth, 0, 0, 0);
 
@@ -94,9 +92,10 @@ public class MainActivity extends AppCompatActivity {
                            //Caso ele escolha a data de hoje
                            if(dataSelecionada.before(calendario)){
                                Toast.makeText(MainActivity.this, "Escolha uma data posterior a hoje", Toast.LENGTH_SHORT).show();
+                               edDataViagem.setText("");
                            }
                            else{
-                               //Texto para mostrar a data escolhida
+                               //Assim que der OK, vai criar o texto da data
                                String dataEsc = dayOfMonth + "/" + (month + 1) + "/" + year;
 
                                //Mostra a mensagem da data escolhida
@@ -117,16 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
                //Mostra o calendário na tela
                calendarioFlutuante.show();
-
-
-
-
            }
         });
 
         /*
         Para adicionar a lista ao spinner, teremos que criar um adaptador
-        /
         Como temos duas listas, iremos criar uma função para isto
         ...
         Agora é só chamar a função
@@ -140,11 +134,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Agora configurar os cliques
-
         spOrigem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-
-            //Asim que um item for selecionado e não tiver escrito "Selecione", mostra o destino escolhido
+            //Assim que um item for selecionado e não tiver escrito "Selecione", mostra o destino escolhido
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 origem = parent.getItemAtPosition(position).toString();
                 if (! origem.contains("Selecione")){
@@ -186,6 +178,16 @@ public class MainActivity extends AppCompatActivity {
                 else if(origem == destino){
                     Toast.makeText(MainActivity.this, "Escolha a destino diferente da origem", Toast.LENGTH_SHORT).show();
                 }
+
+                //Mandar as informações para a próxima tela
+                else{
+                    //Mandar para a próxima tela
+                    Intent telaEscolherPassagem;
+                    telaEscolherPassagem = new Intent(MainActivity.this, EscolherPassagemActivity.class);
+                    //Função que manda para próxima tela
+                    startActivity(telaEscolherPassagem);
+
+                }
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -196,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Função para adaptar uma lista
-
     private ArrayAdapter adapatarLista(ArrayList lista){
 
         //Cria um array adaptado
@@ -205,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this,
                 //Formato
                 android.R.layout.simple_spinner_item,
-                //Array a aser adaptada
+                //Array a ser adaptada
                 lista
         );
         //Formata como vai aparecer
