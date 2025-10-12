@@ -1,8 +1,7 @@
 package com.example.busultra;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,12 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import java.util.ArrayList;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class EscolherPassagemActivity extends AppCompatActivity {
 
-    LinearLayout lnScroll, lnCopia;
+    LinearLayout container;
 
 
     @Override
@@ -27,7 +25,34 @@ public class EscolherPassagemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_escolher_passagem);
 
         //Container Principal
-        lnScroll = findViewById(R.id.lnScroll);
+        container = findViewById(R.id.lnContainer);
+
+
+        //Teste de criação de containers usando um inflater
+        LayoutInflater inflater = LayoutInflater.from(this);
+        for(int i = 0; i < 10; i++) {
+            //Clona o layout
+            ConstraintLayout blocoPassagem = (ConstraintLayout) inflater.inflate(R.layout.activity_layout_containers, container, false);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            blocoPassagem.setLayoutParams(params);
+            TextView tvOrigem = blocoPassagem.findViewById(R.id.tvOrigem);
+            TextView tvDestino = blocoPassagem.findViewById(R.id.tvDestino);
+            TextView tvPreco = blocoPassagem.findViewById(R.id.tvPreco);
+            TextView tvHorarioPartida = blocoPassagem.findViewById(R.id.tvHorarioPartida);
+            TextView tvHorarioChegada = blocoPassagem.findViewById(R.id.tvHorarioChegada);
+            Button btMaisInfo = blocoPassagem.findViewById(R.id.btMaisInfo);
+            Button btEscolherPassagem = blocoPassagem.findViewById(R.id.btMaisInfo);
+
+
+            container.addView(blocoPassagem);
+
+        }
+        /*
+
+        Jeito travado
 
         //Laço de repetição para criar várias views
         for(int i = 0; i < 10; i++){
@@ -79,7 +104,7 @@ public class EscolherPassagemActivity extends AppCompatActivity {
             * Aí faz um calculo santana + barueri * 1.2
             * Aí temos o preço da passagem
             * Assim, consigo fazer a conta idependente do destino ou origem escolhidos
-            * */
+            /
             tvPreco.setText("R$ teste"); // Usar a variável de texto do preço
             tvHorarioPartida.setText("Teste Partidas"); // variável do tempo
             tvHorarioChegada.setText("Teste Chegada"); // variável do tempo provavelmente
@@ -128,11 +153,7 @@ public class EscolherPassagemActivity extends AppCompatActivity {
            // lnScroll.addView(blocoPassagem);
             lnScroll.addView(blocoPassagem);
         }
-
-        for(int i = 0; i< 10; i++){
-
-        }
-
+        */
 
         //Programação dos botões
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

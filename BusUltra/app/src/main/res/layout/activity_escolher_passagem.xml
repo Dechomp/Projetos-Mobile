@@ -14,10 +14,10 @@
         tools:layout_editor_absoluteY="1dp">
 
         <LinearLayout
-            android:id="@+id/lnScroll"
+            android:id="@+id/lnContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
