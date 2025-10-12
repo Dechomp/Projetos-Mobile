@@ -2,9 +2,11 @@ package com.example.busultra;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +33,7 @@ public class EscolherPassagemActivity extends AppCompatActivity {
         //Teste de criação de containers usando um inflater
         LayoutInflater inflater = LayoutInflater.from(this);
         for(int i = 0; i < 10; i++) {
+
             //Clona o layout
             ConstraintLayout blocoPassagem = (ConstraintLayout) inflater.inflate(R.layout.activity_layout_containers, container, false);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -44,7 +47,25 @@ public class EscolherPassagemActivity extends AppCompatActivity {
             TextView tvHorarioPartida = blocoPassagem.findViewById(R.id.tvHorarioPartida);
             TextView tvHorarioChegada = blocoPassagem.findViewById(R.id.tvHorarioChegada);
             Button btMaisInfo = blocoPassagem.findViewById(R.id.btMaisInfo);
-            Button btEscolherPassagem = blocoPassagem.findViewById(R.id.btMaisInfo);
+            Button btEscolherPassagem = blocoPassagem.findViewById(R.id.btEscolherPassagem);
+
+            int numBotao = i;
+            btEscolherPassagem.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      try{
+
+                       Toast.makeText(v.getContext(), "Passagem número " + numBotao + " escolhida",Toast.LENGTH_SHORT).show();
+                      }
+                      catch (Exception e){
+                          Toast.makeText(v.getContext(), "Erro ao escolher a passagem" + e.getMessage(),Toast.LENGTH_SHORT).show();
+                      }
+                  }
+            });
+
+            btMaisInfo.setOnClickListener(v -> {
+                Toast.makeText(EscolherPassagemActivity.this, "Mais Informações", Toast.LENGTH_SHORT).show();
+            });
 
 
             container.addView(blocoPassagem);
