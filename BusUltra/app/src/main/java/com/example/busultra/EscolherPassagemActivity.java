@@ -1,5 +1,6 @@
 package com.example.busultra;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,6 +20,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class EscolherPassagemActivity extends AppCompatActivity {
 
     LinearLayout container;
+
+
 
 
     @Override
@@ -41,6 +45,7 @@ public class EscolherPassagemActivity extends AppCompatActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             blocoPassagem.setLayoutParams(params);
+
             TextView tvOrigem = blocoPassagem.findViewById(R.id.tvOrigem);
             TextView tvDestino = blocoPassagem.findViewById(R.id.tvDestino);
             TextView tvPreco = blocoPassagem.findViewById(R.id.tvPreco);
@@ -48,6 +53,15 @@ public class EscolherPassagemActivity extends AppCompatActivity {
             TextView tvHorarioChegada = blocoPassagem.findViewById(R.id.tvHorarioChegada);
             Button btMaisInfo = blocoPassagem.findViewById(R.id.btMaisInfo);
             Button btEscolherPassagem = blocoPassagem.findViewById(R.id.btEscolherPassagem);
+            View diDivisor = blocoPassagem.findViewById(R.id.diDivisor);
+
+
+            tvOrigem.setText(Global.origem);
+            tvDestino.setText(Global.destino);
+            tvPreco.setText("R$ " + Global.preco);
+            tvHorarioPartida.setText("Teste " + Global.distancia);
+
+
 
             int numBotao = i;
             btEscolherPassagem.setOnClickListener(new View.OnClickListener() {

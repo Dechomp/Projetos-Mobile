@@ -55,14 +55,17 @@ public class MainActivity extends AppCompatActivity {
         origens.add("Santana de Parnaíba");
         origens.add("Barueri");
         origens.add("São Paulo");
+        origens.add("Campos do Jordão");
+        origens.add("Rio de Janeiro");
 
         //Lista de destinos
         ArrayList<String> destinos = new ArrayList<>();
         destinos.add("Selecione...");
         destinos.add("Santana de Parnaíba");
-        destinos.add("Cajamar");
+        destinos.add("Campos do Jordão");
         destinos.add("Rio de Janeiro");
-
+        destinos.add("Barueri");
+        destinos.add("São Paulo");
 
         //Quando clicar no botão btEscolherData
         btEscolherData.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 origem = parent.getItemAtPosition(position).toString();
                 if (! origem.contains("Selecione")){
                     Toast.makeText(MainActivity.this, "Origem selecionada: " + origem, Toast.LENGTH_SHORT).show();
+
                 }
             }
 
@@ -169,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
         btBuscarPassagem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Global.distancia = 0;
+                Global.preco = 0;
+
                 //Primeiro vai verificar campos vazios ou não escolhidos
                 if(edDataViagem.equals("") || origem.contains("Selecione") || destino.contains("Selecione")){
                     Toast.makeText(MainActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
@@ -181,6 +188,73 @@ public class MainActivity extends AppCompatActivity {
 
                 //Mandar as informações para a próxima tela
                 else{
+
+                    Global.origem = origem;
+                    Global.destino = destino;
+
+                    if (origem == "Santana de Parnaíba"){
+                        Global.preco = 20;
+                        Global.distancia = 0;
+                    }
+                    else if (origem == "Barueri"){
+                        Global.preco = 15;
+                        Global.distancia = 5;
+                    }
+                    else if (origem == "São Paulo"){
+                        Global.preco = 10;
+                        Global.distancia = 15;
+                    }
+                    else if (origem == "Campos do Jordão") {
+                        Global.preco = 25;
+                        Global.distancia = 25;
+                    }
+                    else if (origem == "Rio de Janeiro") {
+                        Global.preco = 30;
+                        Global.distancia = 40;
+                    }
+                    Toast.makeText(MainActivity.this, "Distancia: " + Global.distancia , Toast.LENGTH_SHORT).show();
+
+                    if (destino == "Santana de Parnaíba"){
+                        Global.preco += 20;
+                        Global.distancia -= 0;
+                    }
+                    else if (destino == "Barueri"){
+                        Global.preco += 15;
+                        Global.distancia -= 5;
+                    }
+                    else if (destino == "São Paulo"){
+                        Global.preco += 10;
+                        Global.distancia -= 15;
+                    }
+                    else if (destino == "Campos do Jordão") {
+                        Global.preco += 25;
+                        Global.distancia -= 25;
+                    }
+                    else if (destino == "Rio de Janeiro") {
+                        Global.preco += 30;
+                        Global.distancia -= 40;
+                    }
+
+                    if (Global.distancia < 0){
+                        Global.distancia *= -1;
+                    }
+                    Toast.makeText(MainActivity.this, "Distancia: " + Global.distancia , Toast.LENGTH_SHORT).show();
+                    Global.preco *= 2;
+
+
+                    if(Global.distancia <= 5){
+                        Global.preco -= 60;
+                    }
+                    else if (Global.distancia <= 10) {
+                        Global.preco -= 40;
+                    }
+                    else if (Global.distancia <= 15) {
+                        Global.preco -= 20;
+                    }
+
+                    Toast.makeText(MainActivity.this, "Distancia: " + Global.distancia , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Preço: " + Global.preco , Toast.LENGTH_SHORT).show();
+
                     //Mandar para a próxima tela
                     Intent telaEscolherPassagem;
                     telaEscolherPassagem = new Intent(MainActivity.this, EscolherPassagemActivity.class);
