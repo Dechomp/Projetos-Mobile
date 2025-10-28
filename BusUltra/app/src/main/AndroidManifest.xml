@@ -6,25 +6,43 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconebusultra"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusUltra">
         <activity
-            android:name=".LayoutContainersActivity"
+            android:name=".PagamentoFeitoActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".PagamentoActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".AlterarInformacoesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutEscolherPassageirosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EscolherPassageirosActivity"
             android:exported="false" />
         <activity
             android:name=".EscolherPassagemActivity"
             android:exported="false" />
         <activity
+            android:name=".LayoutContainersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EscolherBancoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
